@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MONIE WISE</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #007BFF;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+.mobile-menu {
+    display: none;
+}
+
+.menu-icon {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: white;
+}
+
+.cta-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.content {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.content h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cta-button {
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #0056b3;
+}
+
+.image {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+.image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.who-we-are, .how-it-works, .contact-form {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: left;
+
+}
+
+.text-content {
+    margin-bottom: 20px;
+}
+
+.text-content h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.text-content p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.image-gallery img {
+    width: 32%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.grid-item {
+    text-align: center;
+}
+
+.grid-item img {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+}
+
+.contact-form {
+    background-color: #f9f9f9;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form h2 {
+    font-size: 2em;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.contact-form label {
+    display: block;
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.contact-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+    .cta-section {
+        flex-direction: column-reverse;
+    }
+
+    .content {
+        text-align: center;
+    }
+
+    .image {
+        text-align: center;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background-color: #007BFF;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        width: 200px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-gallery img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+</style>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <a href="#"><img src="images/monieWiseLogo.png" alt="Logo"></a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="mobile-menu">
+            <span class="menu-icon">&#9776;</span>
+        </div>
+    </nav>
+    <section class="cta-section">
+        <div class="content">
+            <h1>Secure Your Transactions</h1>
+            <p>Ensure safe and secure transactions on WhatsApp, Instagram, and more with our reliable escrow services.</p>
+            <a href="#sign-up" class="cta-button">Get Started Today</a>
+        </div>
+        <div class="image">
+            <img src="images/1162376_ORH97Z1-Recovered.png" alt="Escrow Service" width="200px">
+        </div>
+    </section>
+    <section class="who-we-are">
+        <div class="text-content">
+            <h2>Who We Are?</h2>
+            <p>We are a trusted escrow service provider dedicated to ensuring safe and secure transactions in the unregulated market. Our mission is to protect both buyers and sellers from fraud and provide a smooth, transparent trading experience.</p>
+        </div>
+        <div class="image-gallery">
+            <img src="images/vision.png" alt="Image 1">
+            <img src="images/mission.png" alt="Image 2">
+            <img src="images/1162376_ORH97Z1-Recovered.png" alt="Image 3">
+        </div>
+    </section>
+    <section class="how-it-works">
+        <div class="text-content">
+            <h2>How It Works</h2>
+            <p>Our process is simple and transparent. Follow these steps to ensure a secure transaction.</p>
+        </div>
+        <div class="grid-container">
+            <div class="grid-item">
+                <img src="images/terms-and-conditions.png" alt="Step 1">
+                <h3>Step 1</h3>
+                <p>Agree to terms and conditions.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/partner.png" alt="Step 2">
+                <h3>Step 2</h3>
+                <p>Buyer deposits funds into escrow.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/boxes.png" alt="Step 3">
+                <h3>Step 3</h3>
+                <p>Seller delivers product or service.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/bill.png" alt="Step 4">
+                <h3>Step 4</h3>
+                <p>Buyer confirms receipt and satisfaction.</p>
+            </div>
+            <div class="grid-item">
+                <img src="images/escrow-account.png" alt="Step 5">
+                <h3>Step 5</h3>
+                <p>Escrow releases funds to the seller.</p>
+            </div>
+        </div>
+    </section>
+    <section class="contact-form">
+        <div class="form-container">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+                
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        const menuIcon = document.querySelector('.menu-icon');
+        const navLinks = document.querySelector('.nav-links');
+
+        menuIcon.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
